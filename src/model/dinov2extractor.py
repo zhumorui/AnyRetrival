@@ -87,20 +87,18 @@ class DinoV2FeatureExtractor:
 def process_image(
     img_path: str, extractor, device: str = "cuda", resize_to: tuple = (224, 224)
 ) -> torch.Tensor:
-    """Processes a single image, resizes it to a fixed size, and extracts its features."""
-    # 打开图像并转换为 PIL.Image
-    img = Image.open(img_path).convert("RGB")  # 确保转换为 RGB 格式
+    """Processes a single image and extracts its features."""
+    img = Image.open(img_path).convert("RGB")
     transform = transforms.Compose(
         [
-            transforms.Resize(resize_to),  # 将图片调整到指定大小
+            transforms.Resize(resize_to),
             transforms.ToTensor(),
             transforms.CenterCrop(
                 [(resize_to[0] // 14) * 14, (resize_to[1] // 14) * 14]
-            ),  # 保证裁剪后大小可以被14整除
+            ),
             transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
         ]
     )
-    # 应用 transforms
     img_tensor = transform(img)[None, ...].to(device)
     features = extractor(img_tensor).cpu()
     patches_h, patches_w = img_tensor.shape[-2] // 14, img_tensor.shape[-1] // 14
@@ -130,7 +128,6 @@ def extract_folder_features(
     for img_file in tqdm(image_files, desc="Extracting features", unit="image"):
         img_path = os.path.join(folder, img_file)
         features.append(process_image(img_path, extractor, device=device))
-        print(features[-1].shape)
 
     return torch.stack(features)
 
@@ -159,8 +156,8 @@ def save_features(
 
 def main():
     """Main entry point for the feature extraction pipeline."""
-    folder = "data/datasets/roxford5k/jpg/"  # Input folder
-    output_path = "features.pt"  # Output file
+    folder = "data/datasets/roxford5k/jpg/"
+    output_path = "features.pt"
     device = "cuda" if torch.cuda.is_available() else "cpu"
     save_features(folder, output_path, facet="query", device=device, limit=20)
 
