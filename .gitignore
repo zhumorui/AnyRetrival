@@ -6,6 +6,12 @@ __pycache__/
 # C extensions
 *.so
 
+# dataset
+data/
+
+# Conda env 
+.CONDA_ENV
+
 # Distribution / packaging
 .Python
 build/
