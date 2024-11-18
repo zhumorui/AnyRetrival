@@ -6,6 +6,12 @@ __pycache__/
 # C extensions
 *.so
 
+# checkpoints or features
+*.pth
+
+# vscode
+.vscode/
+
 # dataset
 data/
 
