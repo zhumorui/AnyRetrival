@@ -6,5 +6,5 @@ This repository evaluates the performance of DINOv2 models on image retrieval ta
 
 ## Acknowledgements
 We thank the authors of the following repositories for their contributions to this project:
-- [revisitop repository](https://github.com/filipradenovic/revisitop) 
+- [Revisitop](https://github.com/filipradenovic/revisitop) 
 - [AnyLoc](https://github.com/AnyLoc/AnyLoc)
