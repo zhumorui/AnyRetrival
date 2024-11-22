@@ -101,7 +101,7 @@ python evaluate_dinov2_attention.py
 
 ![Sparse Matching](assets/sparse_matching.png)
 
-### Similarity Map Visualization on Query, Key, Value, and Token
+### Similarity Map Visualization
 
 ![Similarity Maps](assets/sim_map.png)
 ![Similarity Maps](assets/sim_map_all_facets_paris.png)
