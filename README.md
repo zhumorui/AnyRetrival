@@ -6,6 +6,8 @@
 
 AnyRetrieval leverages state-of-the-art Vision Foundation Models, specifically DINOv2, to advance zero-shot image retrieval tasks. This repository evaluates the performance of DINOv2 on the ROxford5k and RParis6k datasets, demonstrating its superiority in various retrieval scenarios without relying on labeled data.
 
+![AnyRetrieval](assets/flowchart.jpg)
+
 ## Table of Contents
 
 - [Features](#features)
