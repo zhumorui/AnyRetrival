@@ -104,6 +104,8 @@ python evaluate_dinov2_attention.py
 ### Similarity Map Visualization on Query, Key, Value, and Token
 
 ![Similarity Maps](assets/sim_map.png)
+![Similarity Maps](assets/sim_map_all_facets_paris.png)
+![Similarity Maps](assets/sim_map_all_facets_pompidou.png)
 
 
 ### Visualization of Attention Maps with top-k Similarity Scores
