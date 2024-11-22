@@ -103,7 +103,7 @@ python evaluate_dinov2_attention.py
 
 ### Similarity Map Visualization
 
-![Similarity Maps](assets/sim_map.png)
+![Similarity Maps](assets/sim_map_all_facets_bodleian_library.png)
 ![Similarity Maps](assets/sim_map_all_facets_paris.png)
 ![Similarity Maps](assets/sim_map_all_facets_pompidou.png)
 
